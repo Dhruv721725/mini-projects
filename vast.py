@@ -88,7 +88,7 @@ def lstn():
 #start of body
 
 st=lstn()    
-if "cad" in st.lower():
+if "hello" in st.lower():
     u="Dhruv"
     spk(f"{wish()} {u}, How can I help you.")
     s=" "
@@ -123,12 +123,13 @@ if "cad" in st.lower():
             n=l.index("tell")
             a=l[n+1:len(l)]
             t=str(dt.datetime.now()).split(" ")
+            print(t)
             if "time" in a:
                 lt=str(t[1]).split(":")
                 s=f"right now it is {lt[0]} hours, {lt[1]} minute,{lt[2]} seconds"
             elif "date" in a:
                 mon=["january","february","march","april","may","june","july","august","october","november","december"]
-                lt=str(t[2]).split("-")
+                lt=t[0].split("-")
                 m=int(lt[1])
                 s=f"today is {lt[2]} of {mon[m]} of {lt[0]}"
             elif "day" in a:
@@ -136,7 +137,7 @@ if "cad" in st.lower():
                 w=dt.datetime.isoweekday(dt.datetime.now())
                 s=f"today is {wd[w]}"
             else:
-                s="command not defined"
+                s="what"
         elif "play" in l:
             n=l.index("play")
             a=l[n+1:len(l)]
@@ -165,6 +166,6 @@ if "cad" in st.lower():
                             break
 
         else:
-            s="command not defined"
+            s=" "
         spk(s)
         spk("anything else")
