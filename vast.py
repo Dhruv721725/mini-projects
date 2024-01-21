@@ -138,6 +138,7 @@ if "hello" in st.lower():
                 s=f"today is {wd[w]}"
             else:
                 s="what"
+                continue
         elif "play" in l:
             n=l.index("play")
             a=l[n+1:len(l)]
