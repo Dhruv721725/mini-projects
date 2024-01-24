@@ -18,9 +18,11 @@ fspd=pg.time.Clock()
 if not os.path.exists("batrun_hs.txt"):
     f=open("batrun_hs.txt","w")
     hs=f.write("0")
+    f. close() 
 else:
     f=open("batrun_hs.txt","r")
     hs=f.read()
+    f. close() 
 
 # text data
 fnt=pg.sysfont.SysFont("",40,True,True)
