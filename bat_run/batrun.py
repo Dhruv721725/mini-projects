@@ -278,6 +278,7 @@ while gext==False:
             nhs=True
             hsf=open("batrun_hs.txt","w")
             hsf.write(f"{scr}")
+            hsf.close()
         # game over
         if (oy1 in range(by,by+40) and bx in range(ox1,(ox1+180))) or (oy2 in range(by,by+40) and bx in range(ox2,(ox2+180))) or (oy3 in range(by,by+40) and bx in range(ox3,(ox3+180))) or (oy4 in range(by,by+40) and bx in range(ox4,(ox1+180))):
             govr=True
