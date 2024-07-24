@@ -29,7 +29,7 @@ while True:
     
     cv.imshow('Video Captured',frame)
 
-    if cv.waitKey(0)&0xFF==ord('q'):
+    if cv.waitKey(20)&0xFF==ord('q'):
         break
 
 cap.release()
